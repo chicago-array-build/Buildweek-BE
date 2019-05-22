@@ -14,6 +14,8 @@ exports.up = function(knex, Promise) {
         .notNullable()
 
         tbl.string('community_area', 255)
+
+        tbl.string('url', 255)
       });
 };
 
