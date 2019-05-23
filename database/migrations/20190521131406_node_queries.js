@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
         tbl.string('measure', 255)
         .notNullable();
 
-        tbl.integer('time_period')
+        tbl.string('time_period', 255)
         .notNullable()
 
         tbl.string('community_area', 255)
