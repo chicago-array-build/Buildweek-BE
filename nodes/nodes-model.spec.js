@@ -51,7 +51,7 @@ describe('insert()', () => {
         expect(nodes).toHaveLength(1)
       })
 
-      it('added query should have the required fields', async () => {
+      it('added query should have the required fields, and return a url', async () => {
         afterEach(async () => {
             await db('node_queries').truncate()
         })
@@ -64,6 +64,7 @@ describe('insert()', () => {
                 "community_area": "all"
             }
         );
+        //
 
         expect(query).toHaveProperty('sensor_type')
         expect(query).toHaveProperty('measure')

@@ -39,4 +39,12 @@ describe('server', () => {
           });
       });
     });
-  });
+//
+    it('should return 401 status from GET /api/users if no token', () => {
+        return request(server)
+          .get('/api/users')
+          .then(res => {
+            expect(res.status).toEqual(401);
+          });
+      });
+    });
