@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest --watch --verbose"
+
   },
   "keywords": [],
   "author": "Josh Akeman",
@@ -21,6 +23,8 @@
     "sqlite3": "^4.0.6"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "jest": "^24.8.0",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.2"
   }
 }

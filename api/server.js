@@ -18,7 +18,7 @@ server.use('/api/nodes', nodesRouter);
 
 
 server.get('/', (req, res) => {
-  res.send("It's alive!");
+  res.status(200).json({ message : "server is running" });
 });
 
 module.exports = server;

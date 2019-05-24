@@ -20,38 +20,7 @@ async function add(query) {
   const [id] = await db('node_queries').insert(modifiedQuery, 'id');
   
   return findById(id)
-    // const [id] = await db('node_queries').insert(query, 'id');
-    // const obj = findById(id)
-    // const newObj = {...obj, url: 'www.thing.com'}
-    // return db('node_queries')
-    //   .where({ id })
-    //   .update(newObj)
-    //   .then(count => {
-    //     if (count > 0) {
-    //       return findById(id);
-    //     } else {
-    //       return null;
-    //     }
-    //   });
-    // update(id)
-    // return findById(id);
-
   }
-
-  // function update(id) {
-  //   const obj = findById(id)
-  //   const newObj = {...obj, url: 'www.thing.com'}
-  //   return db('node_queries')
-  //     .where({ id })
-  //     .update(newObj)
-  //     .then(count => {
-  //       if (count > 0) {
-  //         return findById(id);
-  //       } else {
-  //         return null;
-  //       }
-  //     });
-  // }
 
 function findById(id) {
 return db('node_queries')
